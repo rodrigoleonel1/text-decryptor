@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Desencriptador de texto</title>
+  </head>
+  <body class="body-container">
+    <header class="header">
+      <h1>Desencriptador de texto</h1>
+    </header>
+
+    <main class="main-container">
+      <section class="textarea-container">
+        <textarea
+          placeholder="Ingrese el texto aqui"
+          name="inputText"
+          id="inputText"
+        ></textarea>
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"
+            /></svg
+          >Solo letras minúsculas y sin acentos</span
+        >
+      </section>
+      <section class="button-container">
+        <button onclick="encrypt()" class="button">Encriptar</button>
+        <button onclick="decrypt()" class="button-outline">Desencriptar</button>
+      </section>
+    </main>
+
+    <aside class="aside-container">
+      <article id="no-result" class="no-result">
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+      </article>
+
+      <article id="result" class="result">
+        <p id="outputText"></p>
+        <button onclick="copyToClipboard()" class="button-outline">
+          Copiar
+        </button>
+      </article>
+    </aside>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
